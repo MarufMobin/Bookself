@@ -79,23 +79,18 @@ function delivaryCostCalculation(cheack){
  };
 
 //  Promocode sector
+let condition = document.getElementById('total-price');
+let promoInput = document.getElementById('code-field');
+let totalCost = document.getElementById('total-cost');
 
-function promocode(){
-    let promoInput = document.getElementById('code-field').value;
-    console.log(promoInput)
+function promocode(promo){
+    document.getElementById(promo).addEventListener('click',function(){
 
-    if( promoInput === "stevekaku" ){
-      let totalPriceText = document.getElementById('total-cost').innerText;
-      console.log(totalPriceText)
-      let totalPrice = parseInt(totalPriceText);
-      console.log(totalPrice)
-      let discount = totalPrice / 20;
-      console.log(discount)
-      totalPriceText.innerText = totalPrice - discount;
-    }
-
-    promoInput.value = '';
+        if( promoInput.value == 'stevekaku'){
+            let discountAmount = parseInt(condition.innerText)-parseInt(condition.innerText)*0.2;
+            totalCost.innerText = discountAmount;
+        }
+        promoInput.value = '';
+    }); 
 }
-document.getElementById('code-btn').addEventListener('click',function(){
-    promocode()
-});
+promocode('code-btn');
