@@ -23,3 +23,18 @@ body{
 .text{
     border-top: 2px solid #000;
 }
+.btn-dark{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .5s;
+}
+.btn-dark:hover{
+    background-color: transparent;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+.prising .table td{
+    font-weight: 700;
+}

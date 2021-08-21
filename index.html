@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -26,64 +26,66 @@
                     <!-- defination And prising  -->
                     <div class="col-md-6">
                         <div class="description">
-                            <h1 class="py-5 mac-heading">Customize Your Blue 24-inch iMac with Apple M1 chip.</h1>
+                            <h1 class="py-5 mac-heading">Customize Your Blue 24-inch iMac witd Apple M1 chip.</h1>
 
-                            <p class="mac-para">It’s here. Our first chip designed specifically for Mac. Packed with an astonishing 16 billion transistors, the Apple M1 system on a chip (SoC) integrates the CPU, GPU, Neural Engine, I/O, and so much more onto a single tiny chip. With incredible performance, custom technologies, and industry-leading power efficiency,1 M1 is not just a next step for Mac — it’s another level entirely</p>
+                            <p class="mac-para">It’s here. Our first chip designed specifically for Mac. Packed witd an astonishing 16 billion transistors, tde Apple M1 system on a chip (SoC) integrates tde CPU, GPU, Neural Engine, I/O, and so much more onto a single tiny chip. Witd incredible performance, custom technologies, and industry-leading power efficiency,1 M1 is not just a next step for Mac — it’s anotder level entirely</p>
                         </div>
                         <!-- Memory -->
                         <div class="memory my-5">
                             <h3>Memory</h3>
-                            <button class="btn btn-dark">
+                            <button class="btn btn-dark" id="small-size-memory">
                                 8 GB Unified Memory
                             </button>
-                            <button class="btn btn-dark">
+                            <button class="btn btn-dark" id="big-size-memory">
                                 16 GB Unified Memory
                             </button>
                         </div>
                         <!-- storage  -->
                         <div class="storage">
                             <h3>Storage</h3>
-                            <button class="btn btn-dark">
+                            <button class="btn btn-dark" id="small-size-storage">
                                 256 GB SSD storage
                             </button>
-                            <button class="btn btn-dark">
+                            <button class="btn btn-dark" id="medium-size-storage">
                                 512 GB SSD storage
                             </button>
-                            <button class="btn btn-dark">
+                            <button class="btn btn-dark" id="big-size-storage">
                                 1 TB SSD storage
                             </button>
                         </div>
                         <!-- Delivery -->
                         <div class="delivery my-5">
                            <h3>Chose Your Delivery Option</h3>
-                            <button class="btn btn-dark">
+                            <button class="btn btn-dark" id="free-delivery-charge">
                                 Friday, Aug 25 free Prime Delivary
                             </button>
-                            <button class="btn btn-dark">
+                            <button class="btn btn-dark" id="paid-delivery-charge">
                                 Sunday, Aug 21   free Prime Delivary
                             </button>
                         </div>
                         <!-- total mac-total-pricing -->
                         <div class="prising">
                             <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Best Price</th>
-                                    <th scope="col">$ 1299</th>
-                                  </tr>
-                                </thead>
                                 <tbody>
+                                    <tr>
+                                        <td scope="col">Best Price</td>
+                                        <td scope="col">$<span id="best-price">1299</span></td>
+                                    </tr>
                                   <tr>
-                                    <th scope="row">Extra Memory Cost</th>                                   
+                                    <td scope="row">Extra Memory Cost</td>     
+                                    <td>$<span id="mamory-cost">0</span></td>                              
                                   </tr>
                                   <tr>
-                                    <th scope="row">Extra Storage Cost</th>
+                                    <td scope="row">Extra Storage Cost</td>
+                                    <td>$<span id="storage-cost">0</span></td> 
                                   </tr>
                                   <tr>
-                                    <th scope="row">Delivary Cost</th>
+                                    <td scope="row">Delivary Cost</td>
+                                    <td>$<span id="delivery-cost">0</span></td> 
                                   </tr>
-                                  <tr>
-                                    <th scope="row" class="mac-total-pricing">Total Price</th>
+                                  <tr class="mac-total-pricing">
+                                    <td scope="row">Total Price</td>
+                                    <td>$<span id="total-price">1299</span></td>
                                   </tr>
                                 </tbody>
                             </table>
@@ -91,21 +93,21 @@
                         <!-- Code Promo -->
                         <div class="code-promo">
                             <h4 class="my-4">Add Promo Code</h4>
-                            <input type="text" class="p-2"> 
-                            <button class="btn btn-danger p-2">Apply</button>
+                            <input type="text" class="p-2" id="code-field"> 
+                            <button class="btn btn-danger p-2" id="code-btn">Apply</button>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                    <div class="text my-5">
-                        <h2 class="text-center mt-4">Total: $1299</h2>
+                        <h2 class="text-center mt-4" id="total-cost">Total: $1299</h2>
                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Option 1: Bootstrap Bundle witd Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <!-- script.js file linking here -->
     <script src="js/script.js"></script>
