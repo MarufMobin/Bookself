@@ -1,6 +1,5 @@
 // Using Mamory Parpuss
-function memoryCostCalculation(isset){
-    
+function memoryCostCalculation(isset){ 
    const memoryValue =  document.getElementById('mamory-cost');
    if( isset == true){
     memoryValue.innerText = '0';
@@ -19,8 +18,8 @@ document.getElementById('big-size-memory').addEventListener('click',function(){
 });
 
 // using Storage 
-function storageCalculation(sizing){
 
+function storageCalculation(sizing){
    if(sizing == 'small'){
         document.getElementById('storage-cost').innerText = '0';
    }
@@ -43,10 +42,9 @@ document.getElementById('big-size-storage').addEventListener('click',function(){
     storageCalculation('big');
 });
 
-
 // Using Delivary Cost	Parpuss
+
 function delivaryCostCalculation(cheack){
-    
     const delivaryValue =  document.getElementById('delivery-cost');
     if( cheack == true){
         delivaryValue.innerText = '0';
@@ -56,7 +54,7 @@ function delivaryCostCalculation(cheack){
     }
     totalCostCount()
  };
- 
+
  document.getElementById('free-delivery-charge').addEventListener('click',function(){
     delivaryCostCalculation(true);
  });
@@ -67,6 +65,7 @@ function delivaryCostCalculation(cheack){
  function totalCostCount(){
 
     // All cost define here
+
     const memoryCostText = document.getElementById('mamory-cost').innerText;
     const memoryCost = parseInt(memoryCostText);
     const storageCostText = document.getElementById('storage-cost').innerText;
@@ -76,5 +75,27 @@ function delivaryCostCalculation(cheack){
 
     const totalAmount = 1299 + memoryCost + storageCost + deliveryCost;
     document.getElementById('total-price').innerText = totalAmount;
-
+    document.getElementById('total-cost').innerText = totalAmount;
  };
+
+//  Promocode sector
+
+function promocode(){
+    let promoInput = document.getElementById('code-field').value;
+    console.log(promoInput)
+
+    if( promoInput === "stevekaku" ){
+      let totalPriceText = document.getElementById('total-cost').innerText;
+      console.log(totalPriceText)
+      let totalPrice = parseInt(totalPriceText);
+      console.log(totalPrice)
+      let discount = totalPrice / 20;
+      console.log(discount)
+      totalPriceText.innerText = totalPrice - discount;
+    }
+
+    promoInput.value = '';
+}
+document.getElementById('code-btn').addEventListener('click',function(){
+    promocode()
+});
